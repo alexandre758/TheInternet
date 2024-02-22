@@ -8,6 +8,8 @@
     "test:local": "ketm run -c test-maker.local.ts",
     "test:scena1": "ketm run --config test-maker.local.ts --filter-scenario=SAC-1-1",
     "test:scena2": "ketm run --config test-maker.local.ts --filter-scenario=SAC-1-2",
+    "test:scena3": "ketm run --config test-maker.local.ts --filter-scenario=SAC-1-3",
+    "test:scena4": "ketm run --config test-maker.local.ts --filter-scenario=SAC-1-4",
     "test:ci": "ketm run -c test-maker.ci.ts"
   },
   "author": "",

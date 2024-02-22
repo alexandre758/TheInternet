@@ -1,5 +1,5 @@
 import { OperatorsManager, pega } from "pega-model";
-import { Selector } from "test-maker";
+import { I, Selector } from "test-maker";
 
 export const operatorsManager = new OperatorsManager();
 
@@ -100,3 +100,17 @@ export function getUrl(env: string) {
     }
     return url;
 }
+
+export async function checkPegaBusyStatus() {
+    await I.waitForCondition({
+        condition: async () => {
+            const options = { timeout: 500 };
+            return await Selector('.document-statetracker', options)
+                .getAttribute('data-state-busy-status') == 'none';
+        },
+        interval: 500,
+        timeout: 5000,
+        retryMessage: `Waiting for Pega internal processes`,
+    });
+}
+
