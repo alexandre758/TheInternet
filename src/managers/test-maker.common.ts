@@ -31,7 +31,7 @@ const dev_users = [
     {
         id: 'user',
         alt: [
-            { username: 'test.cafe', password: 'Rulesfeb24!' },
+            { username: 'test.cafe1', password: 'Rulesfeb24!' },
             { username: 'test.cafe1', password: 'Rulesfeb24!' }
         ],
     },
@@ -49,7 +49,7 @@ const staging_users = [
     {
         id: 'user',
         alt: [
-            { username: 'test.cafe', password: 'Rulesfeb24!' },
+            { username: 'test.cafe1', password: 'Rulesfeb24!' },
             { username: 'test.cafe1', password: 'Rulesfeb24!' }
         ]
     },
@@ -89,13 +89,13 @@ export function getUrl(env: string) {
     let url = '';
     switch (env) {
         case 'dev':
-            url = '';
+            url = 'https://pega870-web.tm.k-expert.com/prweb/';
             break;
         case 'stage':
-            url = '';
+            url = 'https://pega870-web.tm.k-expert.com/prweb/';
             break;
         default:
-            url = '';
+            url = 'https://pega870-web.tm.k-expert.com/prweb/';
             break;
     }
     return url;

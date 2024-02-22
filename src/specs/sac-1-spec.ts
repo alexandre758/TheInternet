@@ -1,7 +1,7 @@
 import { pega } from 'pega-model';
 import { Feature } from "test-maker";
 
-
+/*
 Feature(`Test screen page`)
     .Scenario(`sac-1-1`)
     .Given(`I logged in as a user`, async (I) => {
@@ -18,3 +18,4 @@ Feature(`Test screen page`)
         // await pega.buttonByDataTestId('20190208081744082718727').shouldBeVisible();
         await pega.logoff();
     });
+    */

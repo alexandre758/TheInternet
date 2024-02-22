@@ -1,4 +1,5 @@
-import { Configuration, TerminalReporterOptions, reporters } from "test-maker";
+import { Configuration, mergeAndConcat, reporters } from "test-maker";
+import { common } from "./src/managers/test-maker.common";
 
 const testMakerLocalConfig: Configuration = {
     runner: {
@@ -16,17 +17,8 @@ const testMakerLocalConfig: Configuration = {
         },
     },
     reporting:{
-        reporters: [reporters.terminal,
-            {
-            name:`text`,
-            options:<TerminalReporterOptions>{
-                ignoreLogLevel:true,
-                hook:{
-                    start:false,
-                    done:true,
-                }
-            }
-        }]
+        reporters: [reporters.terminal,reporters.text]
     }
 };
-export default testMakerLocalConfig;
+// export default testMakerLocalConfig;
+export default mergeAndConcat(common, testMakerLocalConfig);

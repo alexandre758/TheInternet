@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"coucou\"",
     "test:local": "ketm run -c test-maker.local.ts",
+    "test:scena1": "ketm run --config test-maker.local.ts --filter-scenario=SAC-1-1",
+    "test:scena2": "ketm run --config test-maker.local.ts --filter-scenario=SAC-1-2",
     "test:ci": "ketm run -c test-maker.ci.ts"
   },
   "author": "",
