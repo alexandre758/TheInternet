@@ -1,0 +1,19 @@
+{
+  "name": "theinternet",
+  "version": "1.0.0",
+  "description": "projet test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"coucou\"",
+    "test:local": "ketm run -c test-maker.local.ts",
+    "test:ci": "ketm run -c test-maker.ci.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "test-maker": "file:test-maker-9.0.0.tgz"
+  },
+  "optionalDependencies": {
+    "pega-model": "2.1.1"
+  }
+}
