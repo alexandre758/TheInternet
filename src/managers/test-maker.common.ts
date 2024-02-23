@@ -1,4 +1,4 @@
-import { OperatorsManager, pega } from "pega-model";
+import { OperatorsManager } from "pega-model";
 import { I, Selector } from "test-maker";
 
 export const operatorsManager = new OperatorsManager();

@@ -14,7 +14,7 @@ Feature('Dropdown')
 .When('je choisi l option 1',async()=>{
     await pega.dropdownByXPath('//select').select('1')
 })
-.Then('la liste contient un choix option 2', async(I: Controller) => {
+.Then('la liste contient un choix option 2', async() => {
     await pega.dropdownByXPath('//select').shouldHaveSuggestedItemsByInnerText(['Option 2'])
 })
 
