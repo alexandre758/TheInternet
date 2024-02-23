@@ -15,12 +15,6 @@ export const common = {
             let name = runInfo.configuration.extra.env.name;
             console.log("current env="+name);
             await operatorsManager.SetOperatorsSource(getUsersPool(common.extra.env.name));
-        }), 
-        afterEachScenario: (async(_I:any)=>{
-            // await runInfo.configuration.extra.operatorsManager.unAssignOperator('user', operator.username);
-            if(await Selector('.icons.avatar',{timeout:2000}).exists){
-                await pega.logoff();
-            }
         })
     }
 

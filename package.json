@@ -5,12 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"coucou\"",
+    "test:demo":"ketm run --config test-maker.local.ts --filter-feature=demo",
     "test:local": "ketm run -c test-maker.local.ts",
+    "test:sac":"ketm run --config test-maker.local.ts --filter-feature=Test-Screen-Page",
     "test:scena1": "ketm run --config test-maker.local.ts --filter-scenario=SAC-1-1",
     "test:scena2": "ketm run --config test-maker.local.ts --filter-scenario=SAC-1-2",
     "test:scena3": "ketm run --config test-maker.local.ts --filter-scenario=SAC-1-3",
     "test:scena4": "ketm run --config test-maker.local.ts --filter-scenario=SAC-1-4",
-    "test:ci": "ketm run -c test-maker.ci.ts"
+    "test:ci": "ketm run -c test-maker.ci.ts",
+    "test:exo1":"ketm run --config test-maker.local.ts --filter-feature=A/BTesting",
+    "test:exo2":"ketm run --config test-maker.local.ts --filter-feature=Broken-images",
+    "test:exo4":"ketm run --config test-maker.local.ts --filter-feature=Dropdown",
+    "test:exo3":"ketm run --config test-maker.local.ts --filter-feature=Drag-and-drop"
   },
   "author": "",
   "license": "ISC",

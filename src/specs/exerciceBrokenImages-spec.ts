@@ -1,6 +1,6 @@
 import { Controller, Feature, Selector } from "test-maker";
 
-Feature('exercice broken images')
+Feature('Broken-images')
 .Scenario('scénario 1')
 .Given('connexion au site', async(page: Controller) => {
     await page.goto('https://the-internet.herokuapp.com/broken_images')

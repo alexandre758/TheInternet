@@ -2,7 +2,7 @@ import { Controller, Feature, Selector } from "test-maker";
 
 
 
-Feature('exercice drag and drop')
+Feature('Drag-and-drop')
 .Scenario('scénario 1')
 .Given('connexion au site', async(page: Controller) => {
     await page.goto('https://the-internet.herokuapp.com/drag_and_drop')

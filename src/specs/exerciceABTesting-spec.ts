@@ -3,7 +3,7 @@ import { Controller, Feature, Selector } from "test-maker";
 
 
 
-Feature('exercice A/B testing')
+Feature('A/BTesting')
 .Scenario('scénario 1')
 .Given('connexion au site', async(I: Controller) => {  //async(page: Controller, runInfo) ← voir l'utilité du runInfo
     await I.goto('https://the-internet.herokuapp.com/')
