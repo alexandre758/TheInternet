@@ -1,5 +1,3 @@
-import { pega } from 'pega-model';
-import { Feature } from "test-maker";
 
 /*
 Feature(`Test screen page`)

@@ -1,3 +1,4 @@
+import { pega } from "pega-model";
 import { Controller, Feature, Selector } from "test-maker";
 
 
@@ -10,9 +11,10 @@ Feature('exercice dropdown')
     const options = await Selector('select > option').count
     await I.expect(options).toEqual(3)
 })
-.When('je choisi l option 1',async(I)=>{
-    await I.click('select')
-    await Selector('select').withText('Option 1').click()
+.When('je choisi l option 1',async()=>{
+    await pega.dropdownByCss('select').select('Option 1')
+    // await I.click('select')
+    // await Selector('select').withText('Option 1').click()
 })
 .Then('la liste contient un choix option 2', async(I: Controller) => {
     const options = await Selector('select > option').withText('Option 2').exists
