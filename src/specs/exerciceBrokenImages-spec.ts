@@ -14,8 +14,8 @@ Feature('Broken-images')
     await theInternetPage.gotoImgLink(0)
 })
 .Then('je n ai pas d erreur 404 sur la première image', async(I: Controller) => {
-    await theInternetPage.imgHere()
-    await I.goBackward()
+    await theInternetPage.imgHere();
+    await I.goForward()
 })
 .When('je clique sur le lien de la deuxième image',async()=>{
     await theInternetPage.gotoImgLink(1)
