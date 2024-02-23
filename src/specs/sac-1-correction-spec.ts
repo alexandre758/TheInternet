@@ -1,5 +1,6 @@
 import { Feature, Selector } from "test-maker";
 import { testScreen } from '../../model/pages/testScreenPage';
+import {Data,book} from '../datas/data'
 import { pega } from 'pega-model';
 
 let operator: any;
@@ -63,11 +64,11 @@ Feature(`Test Screen Page`)
 
     })
     .When('I`m selecting the book in the “Book“ field', async () => {
-        await testScreen.addBook('Hamlet', 'William Shakespeare')
+        await testScreen.addBook(Data.book.Hamlet.title!, Data.book.Hamlet.author!)
     })
     .Then('I can see the information in the table below(name, author, year and is Selected checkbox).', async (I, runInfo: any) => {
         await testScreen.bookTabVisible();
-        await testScreen.verifyCellReadonlyText(1, 1, 'William Shakespeare')
-        await testScreen.verifyCellReadonlyText(1, 2, 'Hamlet')
+        await testScreen.verifyCellReadonlyText(1, 1, Data.book.Hamlet.author!)
+        await testScreen.verifyCellReadonlyText(1, 2, Data.book.Hamlet.title!)
         await testScreen.tableCheckbox(1, 4)
     })
