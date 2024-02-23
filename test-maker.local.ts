@@ -1,4 +1,4 @@
-import { Configuration, mergeAndConcat, reporters } from "test-maker";
+import { AllureReporterOptions, Configuration, mergeAndConcat, reporters } from "test-maker";
 import { common } from "./src/managers/test-maker.common";
 
 const testMakerLocalConfig: Configuration = {
@@ -16,8 +16,15 @@ const testMakerLocalConfig: Configuration = {
             },
         },
     },
-    reporting:{
-        reporters: [reporters.terminal,reporters.text]
+    reporting: {
+        // reporters: [reporters.terminal, reporters.text,reporters.allure]
+        reporters:[{
+            name:'allure',
+            options:<AllureReporterOptions>{
+                reportFolder: './dist/reports/allure/allure-report',
+                open:true
+            }
+        }]
     }
 };
 // export default testMakerLocalConfig;
