@@ -18,11 +18,11 @@ const testMakerLocalConfig: Configuration = {
     },
     reporting: {
         // reporters: [reporters.terminal, reporters.text,reporters.allure]
-        reporters:[{
+        reporters:[reporters.terminal,{
             name:'allure',
             options:<AllureReporterOptions>{
                 reportFolder: './dist/reports/allure/allure-report',
-                open:true
+                open:false
             }
         }]
     }

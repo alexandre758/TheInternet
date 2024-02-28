@@ -28,6 +28,11 @@ export class TheInternetPage {
             await console.log('image is found')
         }
     }
+    public async login(username:string,pwd:string){
+        await Selector('#username').fillField(username)
+        await Selector('#password').fillField(pwd)
+        await Selector('//button').click()
+    }
 }
 
 

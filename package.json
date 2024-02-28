@@ -16,7 +16,8 @@
     "test:exo1":"ketm run --config test-maker.local.ts --filter-feature=A/BTesting",
     "test:exo2":"ketm run --config test-maker.local.ts --filter-feature=Broken-images",
     "test:exo4":"ketm run --config test-maker.local.ts --filter-feature=Dropdown",
-    "test:exo3":"ketm run --config test-maker.local.ts --filter-feature=Drag-and-drop"
+    "test:exo3":"ketm run --config test-maker.local.ts --filter-feature=Drag-and-drop",
+    "test:exo5":"ketm run --config test-maker.local.ts --filter-feature=Methode-argument"
   },
   "author": "",
   "license": "ISC",
