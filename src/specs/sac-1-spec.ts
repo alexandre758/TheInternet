@@ -15,7 +15,9 @@ Feature(`Test-Screen-Page`)
             await pega.logoff();
         }
     })
-    .Scenario(`SAC-1-1`)
+
+
+    .Scenario(`SAC-1-1`) //pas utile suite à la création de la méthode 'createTestCase()'
     .Given(`I logged in as a user`, async (_I, runInfo: any) => {
         await testScreen.loginViaUserPool(operator, runInfo);
     })
